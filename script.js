@@ -1,36 +1,24 @@
-// Temperature conversion logic
 function convertTemperature() {
-    let inputValue = document.getElementById("temperature").value;
-    let conversionType = document.getElementById("conversionType").value;
-    let result = 0;
-    let resultString = "";
-    switch(conversionType) {
+    const inputValue = parseFloat(document.getElementById("temperature").value);
+    const conversionType = document.getElementById("conversionType").value;
+    let result, unit;
+
+    switch (conversionType) {
         case "cf":
-            result = (inputValue * 9/5) + 32;
-            resultString = result.toFixed(2) + " °F";
-            break;
+            result = inputValue * 9/5 + 32; unit = "°F"; break;
         case "fc":
-            result = (inputValue - 32) * 5/9;
-            resultString = result.toFixed(2) + " °C";
-            break;
+            result = (inputValue - 32) * 5/9; unit = "°C"; break;
         case "ck":
-            result = parseFloat(inputValue) + 273.15;
-            resultString = result.toFixed(2) + " °K";
-            break;
+            result = inputValue + 273.15; unit = "K"; break;
         case "kc":
-            result = inputValue - 273.15;
-            resultString = result.toFixed(2) + " °C";
-            break;
+            result = inputValue - 273.15; unit = "°C"; break;
         case "fk":
-            result = (inputValue - 32) * 5/9 + 273.15;
-            resultString = result.toFixed(2) + " °K";
-            break;
+            result = (inputValue - 32) * 5/9 + 273.15; unit = "K"; break;
         case "kf":
-            result = (inputValue - 273.15) * 9/5 + 32;
-            resultString = result.toFixed(2) + " °F";
-            break;
+            result = (inputValue - 273.15) * 9/5 + 32; unit = "°F"; break;
         default:
-            resultString = "Invalid!";
+            document.getElementById("result").innerHTML = "Invalid!";
+            return;
     }
-    document.getElementById("result").innerHTML = resultString;
+    document.getElementById("result").innerHTML = `${result.toFixed(2)} ${unit}`;
 }
