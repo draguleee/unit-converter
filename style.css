@@ -18,6 +18,10 @@ header a {
     font-size: large;
 }
 
+header a:hover {
+    color: #3F4F44;
+}
+
 hr {
     border: 1px solid #3F4F44;
 }
