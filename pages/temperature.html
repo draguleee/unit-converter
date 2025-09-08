@@ -20,11 +20,33 @@
         <hr>
         <div class="card">
             <h1>Temperature Converter</h1>
-            <p id="result"></p>
+            <div class="stack">
+                <label for="temperature">Temperature: </label>
+                <input type="number" name="temperature" id="temperature">
+            </div>
+            <div class="stack">
+                <label for="conversionType">Convert to: </label>
+                <select name="conversionType" id="conversionType">
+                    <option value="select">Select...</option>
+                    <option value="cf">&deg;C to &deg;F</option>
+                    <option value="fc">&deg;F to &deg;C</option>
+                    <option value="kc">&deg;K to &deg;C</option>
+                    <option value="ck">&deg;C to &deg;K</option>
+                    <option value="kf">&deg;K to &deg;F</option>
+                    <option value="fk">&deg;F to &deg;K</option>
+                </select>
+            </div>
+            <div class="stack">
+                <button onclick="convertTemperature()">Convert!</button>
+            </div>
+            <div class="stack">
+                <label for="result">Result: </label>
+                <p name="result" id="result"></p>
+            </div>
         </div>
         <footer>
             &copy; Convert.ly - 2025
         </footer>
-        <script src="script.js"></script>
+        <script src="../script.js"></script>
     </body>
 </html>

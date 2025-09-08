@@ -36,6 +36,45 @@ hr {
     text-align: center;
 }
 
+.stack {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.stack label {
+    font-size: large;
+    margin: 0 7px;
+}
+
+.stack input, select {
+    border: none;
+    border-radius: 10px;
+    width: 30%;
+    font-size: medium;
+    padding: 7px;
+    margin: 0 7px;    
+    text-align: center;
+}
+
+.stack p {
+    margin: 0 7px;
+    font-size: large;
+    font-weight: bolder;
+}
+
+button {
+    border: none;
+    border-radius: 7px;
+    background-color: #2C3930;
+    margin: 10px;
+    padding: 10px;
+    font-size: medium;
+    color: #DCD7C9; 
+}
+
 .links {
     display: flex;
     flex-direction: column;
