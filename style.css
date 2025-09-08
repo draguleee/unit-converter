@@ -13,8 +13,9 @@ header {
 
 header a {
     text-decoration: none;
-    color: white;
+    color: #DCD7C9;;
     margin: auto 10px;
+    font-size: large;
 }
 
 hr {
@@ -41,4 +42,20 @@ hr {
     color: #DCD7C9;
     margin: 10px 0;
     font-size: x-large;
+}
+
+.links a:hover {
+    color: #2C3930;
+}
+
+footer {
+    color: #DCD7C9;
+    text-align: center;
+    font-size: smaller;
+}
+
+@media (max-width: 500px) {
+    header a {
+        font-size: small;
+    }
 }
