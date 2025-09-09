@@ -2,6 +2,7 @@
 
 ## 📆 09.09.2025:
 * **Length Converter**: defined the structure of the page in `length.html` file + added logic for converting length (`convertLength()` function) in `script.js` file.
+* **Weight Converter**: defined the structure of the page in `weight.html` file + added logic for converting weight (`convertWeight()` function) in `script.js` file.
 
 
 ## 📆 08.09.2025:
