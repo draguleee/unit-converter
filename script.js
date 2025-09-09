@@ -31,5 +31,5 @@ function convertLength() {
         default: document.getElementById("result").innerHTML = "Invalid!"; return;
     }
 
-    document.getElementById("result").innerHTML = `${result.toFixed(2)} ${unit}`;
+    document.getElementById("result").innerHTML = `${result.toFixed(4)} ${unit}`;
 }
