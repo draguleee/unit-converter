@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Length - Convert.ly</title>
+        <title>Temperature - Convert.ly</title>
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
     <body>
         <header>
             <div>
-                <i class="fa-solid fa-arrows-turn-to-dots"><a href="/">Convert.ly</a></i>    
+                <i class="fa-solid fa-arrows-turn-to-dots"><a href="../index.html">Convert.ly</a></i>    
             </div>
             <div>
                 <a href="temperature.html">Temperature</a>
@@ -20,12 +20,33 @@
         <hr>
         <div class="card">
             <h1>Weight Converter</h1>
-            <input type="number" name="weight" id="weight" placeholder="Weight...">
-            <p id="result"></p>
+            <div class="stack">
+                <label for="weight">Weight: </label>
+                <input type="number" name="weight" id="weight">
+            </div>
+            <div class="stack">
+                <label for="conversionType">Convert to: </label>
+                <select name="conversionType" title="conversionType" id="conversionType">
+                    <option value="select">Select...</option>
+                    <option value="gkg">g to kg</option>
+                    <option value="kgg">kg to g</option>
+                    <option value="glb">g to lb</option>
+                    <option value="lbg">lb to g</option>
+                    <option value="kglb">kg to lb</option>
+                    <option value="lbkg">lb to kg</option>
+                </select>
+            </div>
+            <div class="stack">
+                <button onclick="convertWeight()">Convert!</button>
+            </div>
+            <div class="stack">
+                <label for="result">Result: </label>
+                <p name="result" id="result"></p>
+            </div>
         </div>
         <footer>
             &copy; Convert.ly - 2025
         </footer>
-        <script src="script.js"></script>
+        <script src="../script.js"></script>
     </body>
 </html>
