@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Length - Convert.ly</title>
+        <title>Temperature - Convert.ly</title>
         <link rel="stylesheet" href="../style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,12 +20,33 @@
         <hr>
         <div class="card">
             <h1>Length Converter</h1>
-            <input type="number" name="length" id="length" placeholder="Length...">
-            <p id="result"></p>
+            <div class="stack">
+                <label for="length">Length: </label>
+                <input type="number" name="length" id="length">
+            </div>
+            <div class="stack">
+                <label for="conversionType">Convert to: </label>
+                <select name="conversionType" title="conversionType" id="conversionType">
+                    <option value="select">Select...</option>
+                    <option value="mft">m to ft</option>
+                    <option value="ftm">ft to m</option>
+                    <option value="mkm">m to km</option>
+                    <option value="kmm">km to m</option>
+                    <option value="fkm">ft to km</option>
+                    <option value="kmf">km to ft</option>
+                </select>
+            </div>
+            <div class="stack">
+                <button onclick="convertLength()">Convert!</button>
+            </div>
+            <div class="stack">
+                <label for="result">Result: </label>
+                <p name="result" id="result"></p>
+            </div>
         </div>
         <footer>
             &copy; Convert.ly - 2025
         </footer>
-        <script src="script.js"></script>
+        <script src="../script.js"></script>
     </body>
 </html>

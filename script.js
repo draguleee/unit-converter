@@ -15,3 +15,21 @@ function convertTemperature() {
     
     document.getElementById("result").innerHTML = `${result.toFixed(2)} ${unit}`;
 }
+
+function convertLength() {
+    const inputValue = parseFloat(document.getElementById("length").value);
+    const conversionType = document.getElementById("conversionType").value;
+    let result, unit;
+
+    switch (conversionType) {
+        case "mft": result = inputValue * 3.28084; unit = "ft"; break;
+        case "ftm": result = inputValue / 3.28084; unit = "m"; break;
+        case "mkm": result = inputValue / 1000; unit = "km"; break;
+        case "kmm": result = inputValue * 1000; unit = "m"; break;
+        case "fkm": result = inputValue / 3280.84; unit = "km"; break;
+        case "kmf": result = inputValue * 3280.84; unit = "ft"; break;
+        default: document.getElementById("result").innerHTML = "Invalid!"; return;
+    }
+
+    document.getElementById("result").innerHTML = `${result.toFixed(2)} ${unit}`;
+}
